@@ -5,28 +5,12 @@
  "Competition"
 */
 
-var toQualify = "Matchup",
+var toQualify = "Matchups",
+    motto = "I let my fingers do the talking",
     matchesToAdvance = 6,
-    myChoiceTeams = ["Real Madrid", "Manchester United", "FC Barcelona"],
-    OptionB_Money = 75;
-
-/*
- // Same Example - Return the greeting as a string.
-
-var getGreetingByName = function(name) {
-    var currentHour = (new Date()).getHours(),
-        timeOfDay, greeting;
-    if (currentHour < 12) { timeOfDay = "morning"; }
-    else if (currentHour < 17) { timeOfDay = "afternoon";}
-    else { timeOfDay = "evening"; }
-    greeting = "Good " + timeOfDay + ", " + name + "!";
-    // console.log(greeting);
-    return greeting;
-
-};
-var fullGreeting = getGreetingByName("Agustin");
-console.log(fullGreeting);
-*/
+    myChoiceTeams = ["Real Madrid", "Manchester United", "Chelsea"],
+    OptionB_Money = 75,
+    myTeam = "Real Madrid";
 
 // Procedure
 console.log("I began to notice with more detail the options for the Tournament. There are three options to enter the FIFA 12 tournament: ");
@@ -60,7 +44,7 @@ var optionB = function (optionB_Money, matches){
         return optionB_Result;
 };
 var resultOptionB = optionB(75, 3);
-//console.log(resultOptionB); //return boolean: "The Display show congrats you qualify for the finals!"
+//console.log(resultOptionB); //return boolean: "The Display shows congrats you qualify for the finals!"
 
 // Number Function
 var choosingOption_A = function (match){
@@ -76,30 +60,21 @@ var choosingOption_A = function (match){
           };
         
         console.log("One more game to enter to the finals!")
-        if (match === 6) { result1 = "You earned your spot in the Finals."; }
+        if (match === 6) { result1 = "You advance to the next matchup."; }
             else { result1 = "Game Over... please try again."}
             result2 = result1;
             return result2;
 
 };
 var theChoice = choosingOption_A(6);
-//console.log(theChoice); // Return Number: "You earned your spot in the Finals."
-/*
- // Same Example - Return the greeting as a string.
+//console.log(theChoice); // Return Number: "You advance to the next matchup"
 
-var getGreetingByName = function(name) {
-    var currentHour = (new Date()).getHours(),
-        timeOfDay, greeting;
-    if (currentHour < 12) { timeOfDay = "morning"; }
-    else if (currentHour < 17) { timeOfDay = "afternoon";}
-    else { timeOfDay = "evening"; }
-    greeting = "Good " + timeOfDay + ", " + name + "!";
-    // console.log(greeting);
-    return greeting;
+// String Function
+var lastPick = "FC Barcelona";
+var defaultConfig = "Tournament Controllers"
+var mySlice = lastPick.slice(0,-5);
+//console.log("In fine print it had said: We will provide " + defaultConfig + "  and will play to default settings. Please choose your team wisely. Should I choose the best team in the world " + mySlice + " yeah right, its Real Madrid!");
 
-};
-var fullGreeting = getGreetingByName("Agustin");
-console.log(fullGreeting);
-*/
+
 
 
