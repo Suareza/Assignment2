@@ -30,13 +30,14 @@ var optionB = function (optionB_Money, matches){
       var winThreeGames = true,
           entryFee = OptionB_Money,
           loseOneGame = false,
-          passOptionA = true
+          passOptionA = true,
+          result1,
+          optionB_Result;
       
-      if (entryFee && winThreeGames || passOptionA) {
-            console.log("Congratulations you qualify for Finals!!");
-        } else {
-            console.log("Game Over... please choose different options if you wish to continue with Tournament.");
-        }
-
+      if (entryFee && winThreeGames || passOptionA) { result1 = "Congratulations you qualify for finals!!"; }
+         else { result1 = "Game Over... please choose different options if you wish to continue with Tournament."; }
+        optionB_Result = "The display shows: " + result1;
+        return optionB_Result;
 };
-optionB(75, 3);
+var resultOptionB = optionB(75, 3);
+console.log(resultOptionB);
