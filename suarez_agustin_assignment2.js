@@ -70,11 +70,28 @@ var theChoice = choosingOption_A(6);
 //console.log(theChoice); // Return Number: "You advance to the next matchup"
 
 // String Function
-var lastPick = "FC Barcelona";
-var defaultConfig = "Tournament Controllers"
-var mySlice = lastPick.slice(0,-5);
-//console.log("In fine print it had said: We will provide " + defaultConfig + "  and will play to default settings. Please choose your team wisely. Should I choose the best team in the world " + mySlice + " yeah right, its Real Madrid!");
+var preferences = function(myTeam, motto){
+    var lastPick = "FC Barcelona";
+    var defaultConfig = "Tournament Controllers";
+    var result1, result2;
+    var mySlice = lastPick.slice(0,-5);
+    if (lastPick !== "Real Madrid") { result1 =  "The best soccer team in the world is " + myTeam + "!";  }
+    else { result1 = "Best soccer team in the world is " + mySlice + "... yeah right.";; }
+    result2 = result1;
+    return result2;
 
+};
+var pick = preferences(myTeam, motto);
+//console.log(pick); "Return String: "Best team in the world is Real Madrid."
 
-
+// Array Function
+var myChoiceTeams = ["Real Madrid", "Manchester United", "Chelsea"],
+    numberOfTeams, lastTeamIndex,
+    
+    numberOfTeams = myChoiceTeams.length;
+    lastTeamIndex = numberOfTeams -1;
+    for (var i = 0; i < myChoiceTeams.length; i++){
+    console.log ("Now which team should I choose? " + myChoiceTeams[i] + "?");
+};
+console.log("My team is " + myChoiceTeams[0] + ".");
 
