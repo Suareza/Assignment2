@@ -44,7 +44,7 @@ var optionB = function (optionB_Money, matches){
         return optionB_Result;
 };
 var resultOptionB = optionB(75, 3);
-//console.log(resultOptionB); //return boolean: "The Display shows congrats you qualify for the finals!"
+console.log(resultOptionB); // Return boolean: "The Display shows congrats you qualify for the finals!"
 
 // Number Function
 var choosingOption_A = function (match){
@@ -67,7 +67,7 @@ var choosingOption_A = function (match){
 
 };
 var theChoice = choosingOption_A(6);
-//console.log(theChoice); // Return Number: "You advance to the next matchup"
+console.log(theChoice); // Return Number: "You advance to the next matchup"
 
 // String Function
 var preferences = function(myTeam, motto){
@@ -82,16 +82,16 @@ var preferences = function(myTeam, motto){
 
 };
 var pick = preferences(myTeam, motto);
-//console.log(pick); "Return String: "Best team in the world is Real Madrid."
+console.log(pick); //Return String: "Best team in the world is Real Madrid."
 
 // Array Function
 var myChoiceTeams = ["Real Madrid", "Manchester United", "Chelsea"],
-    numberOfTeams, lastTeamIndex,
+    numberOfTeams, lastTeamIndex;
     
     numberOfTeams = myChoiceTeams.length;
     lastTeamIndex = numberOfTeams -1;
     for (var i = 0; i < myChoiceTeams.length; i++){
     console.log ("Now which team should I choose? " + myChoiceTeams[i] + "?");
 };
-console.log("My team is " + myChoiceTeams[0] + ".");
+console.log("My team is " + myChoiceTeams[0] + ".");   //Return Array: My Team is Real Madrid
 
